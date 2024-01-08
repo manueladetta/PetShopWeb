@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add User Form</title>
+</head>
+<body>
+	<a href="dashboard.jsp">View All Records</a>
+	<br />
+	<h1>Add New User</h1>
+	<form action="addUser.jsp" method="post">
+		<table>
+			<tr>
+				<td>Nome:</td>
+				<td><input type="text" name="nome" required/></td>
+			</tr>
+			<tr>
+				<td>Cognome:</td>
+				<td><input type="text" name="cognome" required/></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="email" name="email" required/></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password" required/></td>
+			</tr>
+			<tr>
+            	<td>Data di Nascita</td>
+            	<td><input type="text" name="dataDiNascitaString" pattern="\d{4}-\d{2}-\d{2}" required title="Inserisci la data nel formato yyyy-MM-dd"/></td>
+           	<!-- <tr>
+                <td>Giorno: <input type="text" name="giorno" required></td>
+                <td>Mese (in numero): <input type="text" name="mese" required></td>
+                <td>Anno: <input type="text" name="anno" required></td>
+           	</tr> -->
+            </tr>
+			<tr>
+				<td>Cellulare:</td>
+				<td><input type="text" name="cellulare" required/></td>
+			</tr>
+			<tr>
+				<td>Ruolo:</td>
+				<td><input type="radio" name="ruolo" value="M" />Manager 
+				<input type="radio" name="ruolo" value="G" checked />Guest</td>
+			</tr>
+			<tr>
+				<td>Stato:</td>
+				<td><input type="radio" name="stato" value="A" checked />Attivo 
+				<input type="radio" name="stato" value="D" />Disattivo</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Add User" /></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
